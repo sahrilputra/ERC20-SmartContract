@@ -20,7 +20,9 @@ contract MyICO is ERC20 {
        _mint(msg.sender, _amount);
     }
 
-    // insert buyTokens() function
     function buyTokens(uint256 _amount) external payable {
+        require(block.timestamp <= startTime + SALE_DURATION, "Sale has expired");
+       require(msg.value == _amount * 1 ether / 10, "Wrong amount of ETH sent");
+       _mint(msg.sender, _amount);
     }
 }
