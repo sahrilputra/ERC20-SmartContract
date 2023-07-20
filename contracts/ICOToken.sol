@@ -10,7 +10,7 @@ contract MyICO is ERC20 {
     uint256 public constant SALE_DURATION = 1 days;
 
     // insert contructor() function
-
+   
     // insert ownerMint() function
 
     // insert buyTokens() function
