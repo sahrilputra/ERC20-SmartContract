@@ -9,14 +9,18 @@ contract MyICO is ERC20 {
     uint256 public startTime;
     uint256 public constant SALE_DURATION = 1 days;
 
-    // insert contructor() function
-    constructor (uint256 _amount) ERC20("sahrilputra", "ICO"){
+    constructor (uint256 _amount) ERC20("SahrilPutra", "ICO"){
         owner = msg.sender;
         startTime = block.timestamp;
         _mint(msg.sender, _amount);
     }
 
-    // insert ownerMint() function
+    function ownerMint(uint256 _amount) external {
+        require(msg.sender == owner, "Not the owner");
+       _mint(msg.sender, _amount);
+    }
 
     // insert buyTokens() function
+    function buyTokens(uint256 _amount) external payable {
+    }
 }
