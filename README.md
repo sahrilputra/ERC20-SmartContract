@@ -1,3 +1,3 @@
-# Quest 2
+# ERC20
 
-Project repository for Quest 2 of StackUp's Token Standards Masterclass - ERC20.
+Smart Contract With ERC20 using ICO Tokens
